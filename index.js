@@ -113,3 +113,21 @@ const users = [
   //second (optional) => n+1
   
   //concat => merge
+
+  //try output => alpha gama beta
+  function fun(){
+    console.log("alpha");
+    setTimeout(() => console.log("beta"), 5000);
+    console.log('gama');
+  }
+  
+  const res1 = fun();
+
+  //try output => alpha beta gama
+  function fun(){
+    console.log("alpha");
+    setTimeout(() => console.log("beta"), 5000);
+    console.log('gama');
+  }
+  
+  const res2 = fun();
