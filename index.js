@@ -131,3 +131,37 @@ const users = [
   }
   
   const res2 = fun();
+
+  //Using Reduce
+  //To find the frequency of elements in an array
+  let arr = ['hello', 'JS', 'world', 'hello'];
+  
+  const countWord = (array) => {
+    return array.reduce((acc, curr) => {
+      if(acc[curr]){
+        acc[curr]+=1;
+      }
+      else{
+        acc[curr]=1;
+      }
+      return acc;
+    },{})
+  }
+
+  console.log(countWord(arr));
+
+  //To find the frequency of elements using object 
+  countWordThruObj = (array) => {
+    const count={};
+    array.forEach((element) => {
+      if(count[element]){
+        count[element]+=1;
+      }
+      else{
+        count[element]=1;
+      }
+      return count;
+    })
+  }
+
+  console.log(countWordThruObj(arr))
