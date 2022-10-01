@@ -16,8 +16,8 @@ let twoSum = (numbers, target) => {
 let twoSumOptimized = (numbers, target) => {
     let map = new Map()
     for(let i=0; i<numbers.length; i++) {
-        if(map.has(numbers[i])) {
-            map.set(numbers[i], i)
+        if(map.has(target-numbers[i])) {
+            return [map.get(target-numbers[i]), i]
         }
         else {
             map.set(numbers[i], i)
