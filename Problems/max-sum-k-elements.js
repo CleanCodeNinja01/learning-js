@@ -22,7 +22,6 @@ const maxSum = (array, k) => {
 console.log('maxSum', maxSum(arr, k));
 
 //Optimized --> Sliding window --> O(n)
-
 //1. calculate windowSum for the k elements in separate loop
 //2. go lineraly for the array till it reaches end & keep track of max sum simultaneously.
 //3. to get the current sum, add the last (current) element from the block and subtract the previous block
