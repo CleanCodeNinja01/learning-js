@@ -20,14 +20,19 @@ let maxStocksProfit = function(prices, fee) {
     let i = 0;
     while (i<prices.length) {
         if (i==0){
+            // initially profit will be 0
             prevProfit = 0;
+            // initially effective buying will be the price of buying the stock since you are giving it from your own pocket
             prevEffectBuying = prices[i];
         }
         else{
             currentProfit = prices[i] - minEffectiveBuying - fee;
+            // profit should be max
             maxProfit = Math.max(prevProfit, currentProfit);
             currentEffectiveBuying = prices[i] - maxProfit;
+            // effective buying should be min
             minEffectiveBuying = Math.min(prevEffectBuying, currentEffectiveBuying);
+            // updating prevProfit and prevEffectBuying each time
             prevProfit = maxProfit;
             prevEffectBuying = minEffectiveBuying;
         }
