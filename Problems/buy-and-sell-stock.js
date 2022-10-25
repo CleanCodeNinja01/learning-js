@@ -15,8 +15,10 @@ Output: 6
 */ 
 
 let maxStocksProfit = function(prices, fee) {
+    //maintaining states for prevProfit, currentProfit, maxProfit
     let prevProfit, currentProfit, maxProfit = 0;
     let prevEffectBuying, currentEffectiveBuying, minEffectiveBuying = 0;
+    //while loop counter
     let i = 0;
     while (i<prices.length) {
         if (i==0){
