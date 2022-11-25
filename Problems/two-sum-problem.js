@@ -24,3 +24,5 @@ let twoSumOptimized = (numbers, target) => {
         }
     }
 }
+
+console.log('twoSumOptimized: ', twoSumOptimized(numbers, target))

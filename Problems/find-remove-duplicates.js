@@ -19,7 +19,13 @@ const removeDuplicates = (array) => {
 }
 
 let A = [4,2,7,2,3,4,5,2]
-console.log("removeDuplicates",removeDuplicates(A))
+// console.log("removeDuplicates",removeDuplicates(A))
+
+const unique = A.filter((element, index, array) =>{
+    // the below array is formed when condition of element that is not existing before (i.e no duplicate) is true
+    return array.indexOf(element) === index;
+})
+console.log(unique)
 
 const findDuplicates = (array) => {
     let map = new Map();
