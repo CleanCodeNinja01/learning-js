@@ -76,7 +76,7 @@ let employee2 = {
     name: "Saleha",
     sayName: function(){
         // var bar = () =>{
-        //     // this ka value arrow function ki waja se employee ko point krha hai 
+            // this ka value arrow function ki waja se employee ko point krha hai 
         //     console.log(this.name)
         // }
         // bar();
