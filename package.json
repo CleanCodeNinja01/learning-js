@@ -1,0 +1,24 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "learning-js",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/SalehaShujaat786/learning-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalehaShujaat786/learning-js/issues"
+  },
+  "homepage": "https://github.com/SalehaShujaat786/learning-js#readme"
+}
