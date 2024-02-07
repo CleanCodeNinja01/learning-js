@@ -5,7 +5,7 @@
     3. methods
     4. Constructor
     5. Bind
-    6. Arrow function
+    6. Arrow function ==> parent ka jo this hai wohi issk andar hona chahye
 */
 
 // Link: https://www.youtube.com/watch?v=a2X6sRy5zDA&list=PLxnSeqQVewBMOriFCMbLQU9cCjuAD-1-4&index=2
@@ -51,7 +51,7 @@ let employee = {
 
 employee.sayName()
 
-// agar method ko kisi variable men assign karen and then usse call karen tou this ki binding lost hojati hai
+// agar method ko kisi variable men assign karen and then usse call karen tou this ki binding lost hojati hai jisko bind resolve krta hai
  // For Eg:
 
 let showName = employee.sayName.bind({

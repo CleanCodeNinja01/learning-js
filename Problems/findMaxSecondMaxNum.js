@@ -9,7 +9,7 @@ let maxNumberLoop = (array) => {
     let newArray = [...array];
     let sortedArray = newArray.sort();
     let max = sortedArray[array.length-1];
-    while (i--){
+    while (i--){    
         if(array[i] > max){
             max = array[i];
         }

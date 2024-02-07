@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
- var containsDuplicate = function(nums) {
+ var containsDuplicate = function(nums) {g
     let dict = {};
     let value = 1;
     for(let i = 0; i<nums.length; i++){
