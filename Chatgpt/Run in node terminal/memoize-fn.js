@@ -41,3 +41,36 @@ console.log(memoizedAdd(2, 3)); // Output: Performing addition... key 2,3 5
 console.log(memoizedAdd(2, 3)); // Output: key 2,3 5 (Result fetched from cache)
 console.log(memoizedAdd(5, 7)); // Output: Performing addition... key 5,7 12
 console.log(memoizedAdd(5, 7)); // Output: key 5,7 12 (Result fetched from cache)
+
+
+function Company(){
+    this.employeeStack = 'frontend'
+
+    setInterval(function(){
+        this.employeeStack = 'fullstack'; // this refers to the global object
+        console.log('stack changed to: ', this.employeeStack)
+    }, 1000)
+}
+
+var company = new Company()
+
+function CompanyWithArrowFunction(){
+    this.employeeStack = 'backend'
+
+    setInterval(()=>{
+        this.employeeStack = 'fullstack' // this refers to the Company object
+        console.log('stack changed to: ', this.employeeStack)
+    }, 1000)
+}
+
+function objectLiteral(){
+    return {
+        name: 'saleha',
+        age: '26'
+    }
+}
+
+const objectLiteralWithArrowFunction = () => ({
+    name: 'Saleha',
+    age: 27
+})
