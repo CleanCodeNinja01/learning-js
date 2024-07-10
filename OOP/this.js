@@ -71,7 +71,6 @@ showName();
 
 var name = "global"
 
-
 let employee2 = {
     name: "Saleha",
     sayName: function(){
