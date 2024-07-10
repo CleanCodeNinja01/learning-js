@@ -2,6 +2,11 @@ function Fox(color){
 	this.color = color
 }
 
+
+// prototypal inheritance / prototypal chaining
+
+// Object.prototype.hasOwnPropert
+
 Fox.prototype.speak = function(){
 	console.log("Iam"+ this.color)
 }

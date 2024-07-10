@@ -12,3 +12,4 @@ function partnerPortalTeamInsight(){
 }
 
 partnerPortalTeamInsight.prototype = Object.create(partnerPortalTeam.prototype)
+
