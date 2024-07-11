@@ -63,3 +63,30 @@ function checkClosureWithLet() {
 }
 
 checkClosureWithLet();
+
+
+// closure ==> inner function to give access to its outer function scope
+
+// data privacy 
+function createCounter(){
+  let counter = 0
+
+  return {
+    increment(){
+      counter++;
+      return counter
+    },
+    decrement(){
+      counter--;
+      return counter
+    },
+    getCount(){
+      return counter
+    }
+  }
+}
+
+const counter = createCounter()
+console.log(counter.decrement())
+console.log(counter.increment())
+console.log(counter.getCount())
