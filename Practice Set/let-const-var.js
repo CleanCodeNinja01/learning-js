@@ -90,3 +90,19 @@ const counter = createCounter()
 console.log(counter.decrement())
 console.log(counter.increment())
 console.log(counter.getCount())
+
+// closure can create function factories
+
+function multiplier(multiplier){
+  return function(number){
+    return number*multiplier
+  }
+}
+
+const multiplyPrint = multiplier(5)
+
+console.log(multiplyPrint(3))
+
+// closures are powerful features that allow functions to access variables from their lexical scope
+
+// lexical scope ==> variable that is valid till that
