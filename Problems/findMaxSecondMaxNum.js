@@ -8,7 +8,7 @@ let maxNumberLoop = (array) => {
     //storing into a new array since .sort changes original array
     let newArray = [...array];
     let sortedArray = newArray.sort();
-    let max = sortedArray[array.length-1];
+    let max = 0;
     while (i--){    
         if(array[i] > max){
             max = array[i];
@@ -94,16 +94,60 @@ let negativeProduct = (max, min, isNegative) => {
 
 let inputArray1 = [4,8,2,-9,10,3];
 let inputArray2 = [4,8,2,9,1,3];
-console.log("maxNumber", maxNumber(inputArray1));
-console.log("minNumber", minNumber(inputArray1));
-console.log("minNumberLoop", minNumberLoop(inputArray1))
-console.log('maxNumberLoop',maxNumberLoop(inputArray1));
-console.log("secondMaxNumber",secondMaxNumber(inputArray1))
-console.log("secondMinNumber",secondMinNumber(inputArray1))
 
-//maxProductOptimized, minProductOptimized, minSumOptimized, maxSumOptimized
-console.log("maxProductOptimized",maxProductOptimized(inputArray1))//80
-console.log("minProductOptimized",minProductOptimized(inputArray1))//-90
-console.log("maxSumOptimized",maxSumOptimized(inputArray1))//18
-console.log("minSumOptimized",minSumOptimized(inputArray1))//-7
-console.log("negativeProduct",negativeProduct(maxProductOptimized(inputArray1),minProductOptimized(inputArray1),isNegative=true))//80
+// console.log('maxNumberLoop',maxNumberLoop(inputArray1));
+
+// console.log("maxNumber", maxNumber(inputArray1));
+// console.log("minNumber", minNumber(inputArray1));
+// console.log("minNumberLoop", minNumberLoop(inputArray1))
+// console.log('maxNumberLoop',maxNumberLoop(inputArray1));
+// console.log("secondMaxNumber",secondMaxNumber(inputArray1))
+// console.log("secondMinNumber",secondMinNumber(inputArray1))
+
+// //maxProductOptimized, minProductOptimized, minSumOptimized, maxSumOptimized
+// console.log("maxProductOptimized",maxProductOptimized(inputArray1))//80
+// console.log("minProductOptimized",minProductOptimized(inputArray1))//-90
+// console.log("maxSumOptimized",maxSumOptimized(inputArray1))//18
+// console.log("minSumOptimized",minSumOptimized(inputArray1))//-7
+// console.log("negativeProduct",negativeProduct(maxProductOptimized(inputArray1),minProductOptimized(inputArray1),isNegative=true))//80
+
+
+///////
+
+function isPairSum(A, N, X) {
+    // represents first pointer
+    let i = 0;
+
+    // represents second pointer
+    let j = N - 1;
+
+    while (i < j) {
+        // If we find a pair
+        if (A[i] + A[j] === X)
+            return true;
+
+        // If sum of elements at current
+        // pointers is less, we move towards
+        // higher values by doing i++
+        else if (A[i] + A[j] < X)
+            i++;
+
+        // If sum of elements at current
+        // pointers is more, we move towards
+        // lower values by doing j--
+        else
+            j--;
+    }
+    return false;
+}
+
+// Driver code
+const arr = [2, 3, 5, 8, 9, 10, 11];
+const val = 17;
+const arrSize = arr.length;
+
+// array should be sorted before using the two-pointer technique
+arr.sort((a, b) => a - b);
+
+// Function call
+console.log(isPairSum(arr, arrSize, val));

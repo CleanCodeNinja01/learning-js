@@ -96,3 +96,10 @@ const factorial = (number) => {
 
 console.log('hhh')
 console.log(factorial(5))
+
+// shallow copy it copies immediate level of the object
+// pure functions are free from side effects
+
+const originalShallowCopy = {...original}
+
+const originalDeepClone = JSON.parse(JSON.stringify(original))

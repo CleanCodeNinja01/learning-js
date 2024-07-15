@@ -10,7 +10,7 @@ const removeDuplicates = (array) => {
         if(!map.has(array[i])){
             map.set(array[i], 1)
         }
-        else if(map.get(array[i])<=1){
+        else if(map.get(array[i])){
             map.set(array[i], map.get(array[i])-1);
         }
     }
@@ -25,7 +25,7 @@ const unique = A.filter((element, index, array) =>{
     // the below array is formed when condition of element that is not existing before (i.e no duplicate) is true
     return array.indexOf(element) === index;
 })
-console.log(unique)
+// console.log(unique)
 
 const findDuplicates = (array) => {
     let map = new Map();

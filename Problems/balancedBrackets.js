@@ -3,7 +3,7 @@
 // Input: exp = “[()]{}{[()()]()}” 
 // Output: Balanced
 
-const input = '[()]{}{[()()]()}'
+const input = '[()]{}{[()()]()'
 const stack =  [];
 
 // [({[]})]
