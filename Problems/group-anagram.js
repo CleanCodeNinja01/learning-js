@@ -7,12 +7,18 @@ var groupAnagrams = function(strs) {
   for (let word of strs) {
       let anag = word.split("").sort().join("");
       if (map[anag]) {
-        map[anag].push(word);
+        console.log(' map[anag]', map[anag])
+        const a = map[anag].push(word);
+        // a.sort()
+        console.log({a})
       } else {
+        console.log([word])
         map[anag] = [word]
       }
   }
   return Object.values(map);
   }
+
+// co
 
 console.log("groupAnagrams",groupAnagrams(strs))

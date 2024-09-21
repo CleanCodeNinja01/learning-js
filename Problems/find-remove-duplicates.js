@@ -46,4 +46,4 @@ const findDuplicates = (array) => {
     return [...duplicates.keys()];
 }
 
-console.log("findDuplicates",findDuplicates(A))
+console.log("findDuplicates",removeDuplicates(A))

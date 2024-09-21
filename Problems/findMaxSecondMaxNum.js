@@ -2,6 +2,30 @@ let maxNumber = (array) => {
     return Math.max(...array)
 }
 
+const m = [1, 3, 5, 8, 9, 213, 54,43, 6, 8, 98, 09]
+
+const mLoop = (m) => {
+    let max = 0;
+    for(let i=0; i<m.length-1; i++){
+        if (m[i] > max){
+            max = m[i]
+        }
+    }
+    return max
+}
+const secondMLoop = (m) => {
+    let secondMax = 0;
+    let firstMax = Math.max(...m)
+    for(let i=0; i<m.length-1; i++){
+        if (m[i] > secondMax && m[i]<firstMax){
+            secondMax = m[i]
+        }
+    }
+    return secondMax
+}
+
+console.log(secondMLoop(m))
+
 let maxNumberLoop = (array) => {
     let i = array.length;
     //time complexity of sort ==> ?
