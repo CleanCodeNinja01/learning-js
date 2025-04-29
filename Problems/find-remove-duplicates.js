@@ -47,3 +47,22 @@ const findDuplicates = (array) => {
 }
 
 console.log("findDuplicates",removeDuplicates(A))
+
+// new way
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates2 = function(nums) {
+    let uniqueNum = new Map()
+    let index = 0;
+    for (let i=0; i<nums.length; i++){
+        const currentElement = nums[i]
+        if (!uniqueNum.has(currentElement)){
+            uniqueNum.set(currentElement, 1)
+            nums[index] = currentElement
+            index++ 
+        }
+    }
+    return index;
+};
