@@ -40,6 +40,19 @@ class Singleton {
 
 const instance2 = new Singleton()
 
-console.log({instance2})
+// console.log({instance2})
 
 // both above approaches ensure only 1 object is created, providing a global point of access to that instance
+
+
+// simple closure
+
+function outer(){
+    let secret = "🔐";
+    return function inner(){
+        console.log('secret is: ', secret);
+    }
+}
+
+const reveal = outer();
+reveal(); // 🔐
