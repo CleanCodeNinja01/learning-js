@@ -25,4 +25,4 @@ let twoSumOptimized = (numbers, target) => {
     }
 }
 
-console.log('twoSumOptimized: ', twoSum(numbers, target))
+console.log('twoSumOptimized: ', twoSumOptimized(numbers, target))

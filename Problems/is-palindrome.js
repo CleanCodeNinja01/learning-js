@@ -75,3 +75,25 @@ var isPalindrome2Optimized = function(s) {
 const s2 = "A man, a plan, a canal: Panama"
 const s3 = -121
 console.log("isPalindrome2",isPalindrome2Optimized(s3));
+
+// another way
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindromeInteger = function(x) {
+    const original = x
+    let reversed = 0
+    let digit = 0
+
+    while (x > 0) {
+        digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x = Math.floor(x / 10);
+    } 
+
+    return original === reversed
+};
+
+console.log('%cProblems/is-palindrome.js:99 isPalindromeInteger(2332', 'color: #007acc;', isPalindromeInteger(231232));
