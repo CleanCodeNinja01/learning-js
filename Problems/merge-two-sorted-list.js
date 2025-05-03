@@ -31,23 +31,23 @@ function mergeTwoLists(l1, l2) {
 
     // Iterate while both lists are not empty
     while (p1 !== null && p2 !== null) {
-        console.log('in while loop')
-        console.log({p1})
-        console.log({p2})
+        // console.log('in while loop')
+        // console.log({p1})
+        // console.log({p2})
 
         if (p1.val <= p2.val) {
-            console.log('in if statement1')
+            // console.log('in if statement1')
 
-            console.log({p1})
-            console.log({p2})
+            // console.log({p1})
+            // console.log({p2})
 
             current.next = p1;
             p1 = p1.next;
         } else {
-            console.log('in eklse statement1')
+            // console.log('in eklse statement1')
 
-            console.log({p1})
-            console.log({p2})
+            // console.log({p1})
+            // console.log({p2})
             current.next = p2;
             p2 = p2.next;
         }
@@ -56,18 +56,8 @@ function mergeTwoLists(l1, l2) {
 
     // If there are remaining nodes in l1 or l2, append them
     if (p1 !== null) {
-        console.log('in if statement')
-
-        console.log({p1})
-        console.log({p2})
-        console.log(current)
         current.next = p1;
     } else if (p2 !== null) {
-        console.log('in eklse statement2')
-
-        console.log({p1})
-        console.log({p2})
-        console.log(current)
         current.next = p2;
     }
 
