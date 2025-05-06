@@ -25,3 +25,33 @@ Returns the latest version of the document.
 
 */
 
+class DocumentVersioningSystem {
+    constructor() {
+        this.versions = [""];
+        this.currentVersion = 0;
+    }
+
+    edit(startIdx, endIdx, newText) {
+        let currentDoc = this.versions[this.currentVersion];
+        let newDoc = currentDoc.slice(0, startIdx) + newText + currentDoc.slice(endIdx);
+        this.versions.push(newDoc);
+        this.currentVersion++;
+    }
+
+    get_version(version) {
+        return this.versions[version];
+    }
+
+    get_current() {
+        return this.versions[this.currentVersion];
+    }
+}
+
+const doc = new DocumentVersioningSystem("Hello World");
+
+doc.edit(6, 11, "JS");           // Version 1: "Hello JS"
+doc.edit(0, 5, "Hi");            // Version 2: "Hi JS"
+
+console.log(doc.get_version(0)); // "Hello World"
+console.log(doc.get_version(1)); // "Hello JS"
+console.log(doc.get_current());  // "Hi JS"
